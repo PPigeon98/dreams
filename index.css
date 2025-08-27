@@ -45,7 +45,7 @@
   }
 }
 
-#start {
+.sheep {
   position: absolute;
   left: 50%;
   top: 50%;
@@ -55,6 +55,22 @@
   display: block;
   text-align: center;
   overflow: hidden;
+}
+
+#aboutContainer {
+  display: none;
+}
+
+#interestContainer {
+  display: none;
+}
+
+#linkContainer {
+  display: none;
+}
+
+#gachaContainer {
+  display: none;
 }
 
 img {
@@ -114,9 +130,14 @@ img {
   overflow: hidden;
 }
 
+#b0 {
+  left: 15%;
+  top: 85%;
+}
+
 #b1 {
   left: 10%;
-  top: 50%;
+  top: 30%;
 }
 
 #b2 {
@@ -127,4 +148,24 @@ img {
 #b3 {
   left: 85%;
   top: 80%;
+}
+
+#b4 {
+  left: 88%;
+  top: 85%;
+}
+
+#b5 {
+  left: 12%;
+  top: 78%;
+}
+
+#b6 {
+  left: 12%;
+  top: 12%;
+}
+
+#b7 {
+  left: 8%;
+  top: 88%;
 }

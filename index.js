@@ -85,4 +85,47 @@ function generateStars() {
 document.addEventListener('DOMContentLoaded', () => {
   generateStars();
   generateShootings();
+
+  const home = document.getElementById('startContainer');
+  const about = document.getElementById('aboutContainer');
+  const interest = document.getElementById('interestContainer');
+  const link = document.getElementById('linkContainer');
+  const gacha = document.getElementById('gachaContainer');
+  const b0 = document.getElementById('b0');
+  const b1 = document.getElementById('b1');
+  const b2 = document.getElementById('b2');
+  const b3 = document.getElementById('b3');
+
+  b0.addEventListener('click', () => {
+    home.style.display = 'none';
+    gacha.style.display = 'block';
+  });
+  b1.addEventListener('click', () => {
+    home.style.display = 'none';
+    about.style.display = 'block';
+  });
+  b2.addEventListener('click', () => {
+    home.style.display = 'none';
+    interest.style.display = 'block';
+  });
+  b3.addEventListener('click', () => {
+    home.style.display = 'none';
+    link.style.display = 'block';
+  });
+  b4.addEventListener('click', () => {
+    home.style.display = 'block';
+    about.style.display = 'none';
+  });
+  b5.addEventListener('click', () => {
+    home.style.display = 'block';
+    interest.style.display = 'none';
+  });
+  b6.addEventListener('click', () => {
+    home.style.display = 'block';
+    link.style.display = 'none';
+  });
+  b7.addEventListener('click', () => {
+    home.style.display = 'block';
+    gacha.style.display = 'none';
+  });
 });
