@@ -23,18 +23,19 @@ function createShooting() {
   shooting.style.animation = `shooting ${animationDuration}s linear infinite`;
   shooting.style.animationDelay = `${animationDelay}s`;
   
-  const before = document.createElement('div');
+  const tail = document.createElement('div');
 
   const size2 = getRandomValue(250, 400);
 
-  before.style.position = 'absolute';
-  before.style.transform = 'translateY(-50%)';
-  before.style.top = '50%';
-  before.style.width = `${size2}px`;
-  before.style.height = '1px';
-  before.style.background = 'linear-gradient(90deg, #fff, transparent)';
+  tail.style.position = 'absolute';
+  tail.style.transformOrigin = 'left center';
+  tail.style.transform = 'translateY(-50%) translateX(' + (size / 2) + 'px) rotate(-45deg)';
+  tail.style.top = '50%';
+  tail.style.width = `${size2}px`;
+  tail.style.height = '1px';
+  tail.style.background = 'linear-gradient(90deg, #fff, transparent)';
   
-  shooting.appendChild(before);
+  shooting.appendChild(tail);
   
   return shooting;
 }
@@ -82,6 +83,59 @@ function generateStars() {
   }
 }
 
+function gachaa() {
+  const luck = Math.random();
+  //if (luck > 0.005) return;
+
+  const container = document.getElementById('shooting');
+  const shooting = document.createElement('div');
+
+  const right = getRandomValue(0, 60);
+  const size = getRandomValue(22, 33);
+  const animationDelay = 0; //////////////////////////////////////////////////////////
+  const animationDuration = getRandomValue(4, 8);
+
+  shooting.style.position = 'absolute';
+  shooting.style.top = '-4%';
+  shooting.style.right = `${right}%`;
+  shooting.style.width = `${size}px`;
+  shooting.style.height = `${size}px`;
+  shooting.style.background = 'transparent';
+  shooting.style.borderRadius = '50%';
+  shooting.style.animation = `shooting ${animationDuration}s linear 1 forwards`;
+  shooting.style.animationDelay = `${animationDelay}s`;
+
+  const tail = document.createElement('div');
+  const size2 = getRandomValue(260, 420);
+  tail.style.position = 'absolute';
+  tail.style.transformOrigin = 'left center';
+  tail.style.transform = 'translateY(50%) translateX(' + (size / 2) + 'px) rotate(-45deg)';
+  tail.style.top = '50%';
+  tail.style.width = `${size2}px`;
+  tail.style.height = '5px';
+  tail.style.background = 'linear-gradient(90deg, rgba(255, 215, 0, 0.95), transparent)';
+
+  shooting.appendChild(tail);
+
+  const starImg = document.createElement('img');
+  starImg.src = 'images/star.png';
+  starImg.style.position = 'absolute';
+  starImg.style.top = '50%';
+  starImg.style.left = '50%';
+  starImg.style.transform = 'translateY(-50%) translateX(-50%)';
+  starImg.style.width = `1000%`;
+  starImg.style.height = `1000%`;
+  starImg.style.objectFit = 'contain';
+
+  shooting.appendChild(starImg);
+
+  shooting.addEventListener('animationend', () => {
+    shooting.remove();
+  });
+
+  container.appendChild(shooting);
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   generateStars();
   generateShootings();
@@ -95,10 +149,15 @@ document.addEventListener('DOMContentLoaded', () => {
   const b1 = document.getElementById('b1');
   const b2 = document.getElementById('b2');
   const b3 = document.getElementById('b3');
+  const b4 = document.getElementById('b4');
+  const b5 = document.getElementById('b5');
+  const b6 = document.getElementById('b6');
+  const b7 = document.getElementById('b7');
 
   b0.addEventListener('click', () => {
     home.style.display = 'none';
     gacha.style.display = 'block';
+    gachaa();
   });
   b1.addEventListener('click', () => {
     home.style.display = 'none';
