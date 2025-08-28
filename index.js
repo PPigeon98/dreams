@@ -85,14 +85,15 @@ function generateStars() {
 
 function gachaa() {
   const luck = Math.random();
-  //if (luck > 0.005) return;
+  if (luck > 0.25) return;
 
   const container = document.getElementById('shooting');
   const shooting = document.createElement('div');
+  shooting.classList.add('gachaStar');
 
   const right = getRandomValue(0, 60);
   const size = getRandomValue(22, 33);
-  const animationDelay = 0; //////////////////////////////////////////////////////////
+  const animationDelay = getRandomValue(10,42);
   const animationDuration = getRandomValue(4, 8);
 
   shooting.style.position = 'absolute';
@@ -126,8 +127,46 @@ function gachaa() {
   starImg.style.width = `1000%`;
   starImg.style.height = `1000%`;
   starImg.style.objectFit = 'contain';
+  starImg.draggable = false;
 
   shooting.appendChild(starImg);
+
+  const hitbox = document.createElement('div');
+  hitbox.style.position = 'absolute';
+  hitbox.style.left = '50%';
+  hitbox.style.top = '50%';
+  hitbox.style.transform = 'translate(-50%, -50%)';
+  hitbox.style.width = `${size * 4}px`;
+  hitbox.style.height = `${size * 2.2}px`;
+  hitbox.style.borderRadius = '50%';
+  hitbox.style.background = 'rgba(0, 0, 0, 0)';
+  shooting.appendChild(hitbox);
+
+  hitbox.addEventListener('click', (event) => {
+    shooting.remove();
+
+    const gachaContainer = document.getElementById('gachaContainer');
+
+    const fallen = document.createElement('img');
+    fallen.src = 'images/fallen.png';
+    fallen.classList.add('qiqi');
+    fallen.style.position = 'absolute';
+    fallen.style.left = `${event.clientX}px`;
+    fallen.style.top = `${event.clientY}px`;
+    fallen.style.transform = 'translate(-50%, -50%)';
+    fallen.style.width = `${size * 2.2}px`;
+    fallen.style.height = 'auto';
+    fallen.style.zIndex = '1200';
+    fallen.draggable = false;
+
+    gachaContainer.appendChild(fallen);
+
+    setTimeout(() => {
+      fallen.style.transition = 'opacity 727ms ease';
+      fallen.style.opacity = '0';
+      setTimeout(() => fallen.remove(), 727);
+    }, 727);
+  });
 
   shooting.addEventListener('animationend', () => {
     shooting.remove();
@@ -186,5 +225,7 @@ document.addEventListener('DOMContentLoaded', () => {
   b7.addEventListener('click', () => {
     home.style.display = 'block';
     gacha.style.display = 'none';
+    document.querySelectorAll('.gachaStar').forEach((a) => a.remove());
+    document.querySelectorAll('.qiqi').forEach((a) => a.remove());
   });
 });
