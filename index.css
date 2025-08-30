@@ -25,18 +25,6 @@
   overflow: hidden;
 }
 
-#background2background {
-  z-index: 42069;
-}
-
-#background2middleground {
-  z-index: 69420;
-}
-
-#background2foreground {
-  z-index: 727727;
-}
-
 #spawnLeft {
   width: 25%;
   position: absolute;
@@ -72,17 +60,35 @@
   right: 0;
 }
 
-#sheep {
+#sheepContainer {
   width: 20%;
   position: absolute;
-  bottom: 50%;
-  right: 50%;
+  bottom: 5%;
+  right: -10%;
+  animation: sheep 4s linear infinite;
+}
+
+#sheepHitbox {
+  position: absolute;
+  width: 50%;
+  height: 60%;
+  left: 28%;
+  top: 12%;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  z-index: 727727727;
+  background: rgba(69, 69, 69, 0.3);
 }
 
 @keyframes sheep {
   0% {
+    transform: translate(0%, 0%);
+  }
+  50% {
+    transform: translate(-225%, -120%);
   }
   100% {
+    transform: translate(-450%, 0%);
   }
 }
 

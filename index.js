@@ -193,7 +193,11 @@ document.addEventListener('DOMContentLoaded', () => {
   const b5 = document.getElementById('b5');
   const b6 = document.getElementById('b6');
   const b7 = document.getElementById('b7');
+  const sheep = document.getElementById('sheepHitbox');
 
+  sheep.addEventListener('click', () => {
+    alert("hi");
+  });
   b0.addEventListener('click', () => {
     home.style.display = 'none';
     gacha.style.display = 'block';
