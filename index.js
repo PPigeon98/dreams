@@ -176,6 +176,19 @@ function gachaa() {
   container.appendChild(shooting);
 }
 
+let counter = 1;
+let click = true;
+
+function count() {
+  if (!click) return;
+  
+  const sheep = document.getElementById('sheepHitbox');
+
+  sheep.textContent = `${counter}`;
+  counter++;
+  click = false;
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   generateStars();
   generateShootings();
@@ -194,9 +207,14 @@ document.addEventListener('DOMContentLoaded', () => {
   const b6 = document.getElementById('b6');
   const b7 = document.getElementById('b7');
   const sheep = document.getElementById('sheepHitbox');
+  const sheepContainer = document.getElementById('sheepContainer');
 
   sheep.addEventListener('click', () => {
-    alert("hi");
+    count();
+  });
+  sheepContainer.addEventListener('animationiteration', () => {
+    sheep.textContent = '';
+    click = true;
   });
   b0.addEventListener('click', () => {
     home.style.display = 'none';

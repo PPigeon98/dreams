@@ -23,6 +23,7 @@
   width: 100%;
   height: 80%;
   overflow: hidden;
+  pointer-events: none;
 }
 
 #spawnLeft {
@@ -77,7 +78,15 @@
   aspect-ratio: 1 / 1;
   border-radius: 50%;
   z-index: 727727727;
-  background: rgba(69, 69, 69, 0.3);
+  pointer-events: auto;
+  background: rgba(69, 69, 69, 0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #000;
+  font-size: 2rem;
+  font-weight: 700;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.6);
 }
 
 @keyframes sheep {
