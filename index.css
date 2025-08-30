@@ -278,3 +278,12 @@ img {
   left: 8%;
   top: 88%;
 }
+
+#startContainer, #aboutContainer, #interestContainer, #linkContainer, #gachaContainer {
+  transition: opacity 0.5s ease;
+}
+
+.fade {
+  opacity: 0;
+  pointer-events: none;
+}

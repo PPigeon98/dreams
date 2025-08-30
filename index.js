@@ -217,38 +217,78 @@ document.addEventListener('DOMContentLoaded', () => {
     click = true;
   });
   b0.addEventListener('click', () => {
-    home.style.display = 'none';
-    gacha.style.display = 'block';
-    gachaa();
+    home.classList.add('fade');
+    setTimeout(() => {
+      home.style.display = 'none';
+      gacha.style.display = 'block';
+      void gacha.offsetWidth;
+      gacha.classList.remove('fade');
+      gachaa();
+    }, 500);
   });
   b1.addEventListener('click', () => {
-    home.style.display = 'none';
-    about.style.display = 'block';
+    home.classList.add('fade');
+    setTimeout(() => {
+      home.style.display = 'none';
+      about.style.display = 'block';
+      void gacha.offsetWidth;
+      about.classList.remove('fade');
+    }, 500);
   });
   b2.addEventListener('click', () => {
-    home.style.display = 'none';
-    interest.style.display = 'block';
+    home.classList.add('fade');
+    setTimeout(() => {
+      home.style.display = 'none';
+      interest.style.display = 'block';
+      void gacha.offsetWidth;
+      interest.classList.remove('fade');
+    }, 500);
   });
   b3.addEventListener('click', () => {
-    home.style.display = 'none';
-    link.style.display = 'block';
+    home.classList.add('fade');
+    setTimeout(() => {
+      home.style.display = 'none';
+      link.style.display = 'block';
+      void gacha.offsetWidth;
+      link.classList.remove('fade');
+    }, 500);
   });
   b4.addEventListener('click', () => {
-    home.style.display = 'block';
-    about.style.display = 'none';
+    about.classList.add('fade');
+    setTimeout(() => {
+      home.style.display = 'block';
+      about.style.display = 'none';
+      void home.offsetWidth;
+      home.classList.remove('fade');
+    }, 500);
   });
   b5.addEventListener('click', () => {
-    home.style.display = 'block';
-    interest.style.display = 'none';
+    interest.classList.add('fade');
+    setTimeout(() => {
+      home.style.display = 'block';
+      interest.style.display = 'none';
+      void home.offsetWidth;
+      home.classList.remove('fade');
+    }, 500);
   });
   b6.addEventListener('click', () => {
-    home.style.display = 'block';
-    link.style.display = 'none';
+    link.classList.add('fade');
+    setTimeout(() => {
+      home.style.display = 'block';
+      link.style.display = 'none';
+      void home.offsetWidth;
+      home.classList.remove('fade');
+    }, 500);
   });
   b7.addEventListener('click', () => {
-    home.style.display = 'block';
-    gacha.style.display = 'none';
     document.querySelectorAll('.gachaStar').forEach((a) => a.remove());
     document.querySelectorAll('.qiqi').forEach((a) => a.remove());
+    gacha.classList.add('fade');
+    setTimeout(() => {
+      home.style.display = 'block';
+      gacha.style.display = 'none';
+      void home.offsetWidth;
+      home.classList.remove('fade');
+    }, 500);
   });
 });
