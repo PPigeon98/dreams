@@ -1,3 +1,18 @@
+@font-face {
+  font-family: outfit;
+  src: url(images/Outfit-Regular.ttf);
+}
+
+@font-face {
+  font-family: outfit;
+  src: url(images/Outfit-Bold.ttf);
+  font-weight: bold;
+}
+
+* {
+  font-family: outfit;
+}
+
 #background {
   position: absolute;
   top: 0px;
@@ -86,7 +101,7 @@
   color: #000;
   font-size: 2rem;
   font-weight: 700;
-  text-shadow: 0 2px 8px rgba(0,0,0,0.6);
+  text-shadow: 0 2px 3px rgba(0,0,0,0.6);
 }
 
 @keyframes sheep {
@@ -183,7 +198,7 @@ img {
   color: #000;
   font-size: 2rem;
   font-weight: 700;
-  text-shadow: 0 2px 8px rgba(0,0,0,0.6);
+  text-shadow: 0 2px 3px rgba(0,0,0,0.6);
 }
 
 .text {
