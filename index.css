@@ -7,12 +7,91 @@
   background: linear-gradient(#000128, #0039ae);
 }
 
+#background2 {
+  position: absolute;
+  top: 100%;
+  left: 0px;
+  width: 100%;
+  height: 60%;
+  background: linear-gradient(0deg, #000128, #0039ae);
+}
+
+#background2foreground, #background2middleground, #background2background {
+  position: absolute;
+  top: 80%;
+  left: 0px;
+  width: 100%;
+  height: 80%;
+  overflow: hidden;
+}
+
+#background2background {
+  z-index: 42069;
+}
+
+#background2middleground {
+  z-index: 69420;
+}
+
+#background2foreground {
+  z-index: 727727;
+}
+
+#spawnLeft {
+  width: 25%;
+  position: absolute;
+  bottom: 15%;
+  left: 0;
+}
+
+#spawnRight {
+  width: 25%;
+  position: absolute;
+  bottom: 15%;
+  right: 0;
+}
+
+#land {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+#middle {
+  width: 100%;
+  position: absolute;
+  bottom: -15%;
+  right: 0;
+}
+
+#back {
+  width: 100%;
+  position: absolute;
+  bottom: 0%;
+  right: 0;
+}
+
+#sheep {
+  width: 20%;
+  position: absolute;
+  bottom: 50%;
+  right: 50%;
+}
+
+@keyframes sheep {
+  0% {
+  }
+  100% {
+  }
+}
+
 #shooting, #twinkling {
   position: absolute;
   top: 0px;
   left: 0px;
   width: 100%;
-  height: 100%;
+  height: 130%;
   overflow: hidden;
 }
 

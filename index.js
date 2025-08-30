@@ -95,6 +95,7 @@ function gachaa() {
   const size = getRandomValue(22, 33);
   const animationDelay = getRandomValue(10,42);
   const animationDuration = getRandomValue(4, 8);
+  console.log("ggs " + animationDelay);
 
   shooting.style.position = 'absolute';
   shooting.style.top = '-4%';
