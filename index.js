@@ -13,7 +13,7 @@ function createShooting() {
   
   shooting.style.position = 'absolute';
   shooting.style.opacity = '0';
-  shooting.style.top = '-4%';
+  shooting.style.top = '-8%';
   shooting.style.right = `${right}%`;
   shooting.style.width = `${size}px`;
   shooting.style.height = `${size}px`;
@@ -98,7 +98,7 @@ function gachaa() {
   console.log("ggs " + animationDelay);
 
   shooting.style.position = 'absolute';
-  shooting.style.top = '-4%';
+  shooting.style.top = '-10%';
   shooting.style.right = `${right}%`;
   shooting.style.width = `${size}px`;
   shooting.style.height = `${size}px`;
